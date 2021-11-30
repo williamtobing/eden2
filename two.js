@@ -4,8 +4,10 @@ const data = [
   { type: "Foobar", year: 2020 },
 ];
 
-const newArr = data.sort((a, b) =>
-  a.year > b.year ? 1 : b.year > a.year ? -1 : 0
-);
+const sortASC = (arr) => {
+  return arr.sort((a, b) => (a.year > b.year ? 1 : b.year > a.year ? -1 : 0));
+};
+
+const newArr = sortASC(data);
 
 console.log(newArr);
